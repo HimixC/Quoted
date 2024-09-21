@@ -1,13 +1,13 @@
-# FriendlyEats (Web)
+# Quoted (Web)
 
 ## Introduction
 
-"Quoted" is web application that allows users to view, upvte, and share quotes. It is built on Cloud Firestore(Firebase).
-For more information about Firestore visit [the docs][firestore-docs].
+"Quoted" is web application that allows users to view, upvote, and share quotes. It is built on Cloud Firestore(Firebase).
+For more information about Firestore visit [the docs](https://firebase.google.com/docs/firestore).
 
-This project is built inline with the [Cloud Firestore Web Codelab][codelab], which shows how to build and run the applications step-by-step. 
+This project is built inline with the [Cloud Firestore Web Codelab](https://firebase.google.com/codelabs/firestore-web#0), which shows how to build and run the applications step-by-step. 
 
-Features in MVP:
+### Features in MVP:
 1. View a quote with minimum (relative) views and maximum upvotes so far 
     - Uses firestore: read based on composite indexing.
 2. Upvote the displayed quote (once per page load) 
@@ -18,20 +18,20 @@ Features in MVP:
     - Uses firestore: write.
 
 
-The DB structure is as follows:
+### DB model:
 
 Collection(or kind): Quotes
 = Collection of Documents( or entities) comprising of Fields( or properties): 
-- quote_id: <auto>
-- quote: <string>
-- submitted_by: <string>
-- upvotes: <int> 
-- views: <int>
-- relative_views: <int>
-- upvote_info: <collection>
+- quote_id: auto
+- quote: string
+- submitted_by: string
+- upvotes: int
+- views: int
+- relative_views: int
+- upvote_info: collection
 
 Sub-Collection: Upvote_info (for a quote (document))
 = Collection of Documents( or entities) comprising of Fields( or properties): 
-- id: <auto>
-- upvoted_at: <timestamp> 
-- upvoted_by: <string>
+- id: auto
+- upvoted_at: timestamp
+- upvoted_by: string

@@ -1,0 +1,20 @@
+{
+  "name": "quoted",
+  "version": "0.0.1",
+  "description": "Starting point for the Cloud Firestore project",
+  "main": ".",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "fmt": "prettier --write scripts/* styles/*"
+  },
+  "author": "himikc",
+  "devDependencies": {
+    "eslint": "^4.17.0",
+    "prettier": "^1.5.3"
+  },
+  "dependencies": {
+    "@material/button": "^14.0.0",
+    "@material/card": "^14.0.0",
+    "@material/textfield": "^14.0.0"
+  }
+}

@@ -1,0 +1,19 @@
+rules_version = '2';
+
+service cloud.firestore {
+  //read = get + list
+  //write = create + update + delete
+  //Note: Rules written for a collection do not implicitly apply for its subcolleciton
+  match /databases/{database}/documents {
+    // Quotes:
+    //   - Authenticated user can read/create/update 
+    //   - Deletes are not allowed (default)
+    match /quotes/{quoteId} {
+      allow read, create, update: if request.time < timestamp.date(2024, 10, 18) && request.auth != null;
+      allow delete: if false; 
+      match /upvote_info/{upvoteInfoId} {
+        allow create, delete: if request.auth != null;
+      }
+    }
+  }
+}

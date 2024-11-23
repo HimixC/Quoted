@@ -1,5 +1,7 @@
 # Quoted (Web)
 
+Project hosted [here](http://quoted-1b.web.app) with firebase
+
 ## Introduction
 
 "Quoted" is web application that allows users to view, upvote, and share quotes. It is built on Cloud Firestore(Firebase).
